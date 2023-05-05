@@ -1,39 +1,54 @@
 import { Outlet } from 'react-router-dom';
 
 import Directory from '../../components/directory/directory.component';
+import Carousel from '../../components/carousel/carousel.component';
 
 const Home = () => {
-  const categories = [
+  // Data for carousel
+  const carouselSlidesData = [
     {
-      id: 1,
-      title: 'hats',
-      imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+      imageUrl: 'https://i.ibb.co/KLp62sN/lonely-814631-1920.jpeg',
+      author: 'JENES',
+      source: 'Men',
     },
     {
-      id: 2,
-      title: 'jackets',
-      imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+      imageUrl: 'https://i.ibb.co/r4Cnr3c/fashion-2309519-1920.jpg',
+      author: 'Hat',
+      source: 'Summer Collection',
     },
     {
-      id: 3,
-      title: 'sneakers',
-      imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+      imageUrl: 'https://i.ibb.co/230cm10/women.jpg',
+      author: 'Hat',
+      source: 'Summer Collection',
     },
     {
-      id: 4,
-      title: 'womens',
-      imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+      imageUrl: 'https://i.ibb.co/tsdNf3J/5640-girl-paint-dark-portrait-4k.jpg',
+      author: 'Hat',
+      source: 'Summer Collection',
     },
     {
-      id: 5,
-      title: 'mens',
-      imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+      imageUrl: 'https://i.ibb.co/2hnzQYL/johnny-silverhand-6f.jpg',
+      author: 'Hat',
+      source: 'Summer Collection',
+    },
+    {
+      imageUrl: 'https://i.ibb.co/jDdPhJ7/classic-girl-with-hat-4k-fx.jpg',
+      author: 'Hat',
+      source: 'Night Collection',
+    },
+    {
+      imageUrl: 'https://i.ibb.co/v4Z8D8Q/willow-hand-2019-ag.jpg',
+      author: 'Jackets',
+      source: 'Summer Collection',
     },
   ];
 
   return (
     <div>
-      <Directory categories={categories} />
+      <div className="carousel-container">
+        <Carousel slides={carouselSlidesData} />
+      </div>
+      <Directory />
       <Outlet />
     </div>
   );
